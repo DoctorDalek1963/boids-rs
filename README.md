@@ -5,4 +5,4 @@
 ![Mutation testing](https://github.com/DoctorDalek1963/boids-rs/actions/workflows/mutants.yaml/badge.svg)
 [![Docs](https://github.com/DoctorDalek1963/boids-rs/actions/workflows/gh-pages.yaml/badge.svg)](https://doctordalek1963.github.io/boids-rs/docs/boids_rs/index.html)
 
-An implementation of boids in Rust
+An implementation of [boids](https://en.wikipedia.org/wiki/Boids) in Rust.
