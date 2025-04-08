@@ -1,8 +1,8 @@
 {
-  description = "@PROJECT_DESCRIPTION@";
+  description = "An implementation of boids in Rust";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-@NIXPKGS_BRANCH@";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     pre-commit-hooks = {
@@ -119,11 +119,11 @@
           };
 
         packages = rec {
-          default = @CRATE_NAME@;
+          default = boids-rs;
 
-          @CRATE_NAME@ = craneLib.buildPackage (commonArgs
+          boids-rs = craneLib.buildPackage (commonArgs
             // {
-              pname = "@CRATE_NAME@";
+              pname = "boids-rs";
               inherit cargoArtifacts;
               inherit (craneLib.crateNameFromCargoToml {inherit src;}) version;
             });
